@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Intelligent Resume Parser
 
 A production-grade NLP system that extracts structured information from resumes (PDF, DOCX, TXT) and converts it into ATS-friendly JSON.
@@ -30,3 +31,7 @@ Run the parser:
 python main.py
 ```
 This will process all files in `data/` and save results to `output/`.
+=======
+# Resume-Parser
+ml project
+>>>>>>> 764dade239acdab2c80d1428418afc9fba7ada32
