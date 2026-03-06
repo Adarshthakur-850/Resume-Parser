@@ -1,37 +1,139 @@
-<<<<<<< HEAD
-# Intelligent Resume Parser
+# Resume Parser
 
-A production-grade NLP system that extracts structured information from resumes (PDF, DOCX, TXT) and converts it into ATS-friendly JSON.
+A machine learning-based Resume Parser that automatically extracts structured information from unstructured resume documents (PDF/DOCX). The system identifies key details such as name, email, phone number, skills, education, and experience to streamline recruitment and candidate screening workflows.
 
-## Project Structure
-- `data/`: Place your resumes here. (Auto-generates a sample if empty).
-- `output/`: Parsed JSON files will appear here.
-- `src/`: Core logic modules.
-- `main.py`: Main pipeline.
+---
+
+## Overview
+
+Recruiters spend significant time manually reviewing resumes. This project automates resume data extraction using Natural Language Processing (NLP) techniques to convert raw resumes into structured, machine-readable information.
+
+The system supports:
+
+* Resume text extraction (PDF/DOCX)
+* Named Entity Recognition (NER)
+* Skill extraction
+* Contact information detection
+* Structured JSON output
+* Scalable backend-ready architecture
+
+---
 
 ## Features
-- **Multi-Format Support**: Handled PDF, DOCX, and TXT.
-- **NLP Extraction**: Uses `spaCy` for Named Entity Recognition (NER).
-- **Skill Matching**: Extracts skills against a predefined tech dictionary.
-- **Experience Calculation**: Regex-based total experience extraction.
+
+* Automatic text extraction from resumes
+* Email and phone number detection using regex
+* Skill identification using keyword matching / NLP
+* Education and experience extraction
+* Clean structured output (JSON format)
+* Modular and production-ready code structure
+
+---
+
+## Tech Stack
+
+* Python
+* NLP (spaCy / NLTK if used)
+* Regex
+* Pandas
+* PDF parsing libraries (pdfminer / PyPDF2 if used)
+
+---
+
+## Project Structure
+
+```
+Resume-Parser/
+│
+├── data/                 # Sample resumes
+├── src/                  # Core source code
+│   ├── extractor.py
+│   ├── parser.py
+│   ├── utils.py
+│
+├── models/               # NLP models (if applicable)
+├── output/               # Parsed results
+├── requirements.txt
+└── main.py
+```
+
+---
 
 ## Installation
-1. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-2. Download spaCy model:
-   ```bash
-   python -m spacy download en_core_web_sm
-   ```
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Adarshthakur-850/Resume-Parser.git
+cd Resume-Parser
+```
+
+Create virtual environment:
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
 
 ## Usage
+
 Run the parser:
+
 ```bash
-python main.py
+python main.py --file path_to_resume.pdf
 ```
-This will process all files in `data/` and save results to `output/`.
-=======
-# Resume-Parser
-ml project
->>>>>>> 764dade239acdab2c80d1428418afc9fba7ada32
+
+Example output:
+
+```json
+{
+  "name": "John Doe",
+  "email": "john.doe@gmail.com",
+  "phone": "+91-9876543210",
+  "skills": ["Python", "Machine Learning", "SQL"],
+  "education": ["B.Tech in Computer Science"],
+  "experience": ["Data Analyst at XYZ Company"]
+}
+```
+
+---
+
+## Use Cases
+
+* Automated resume screening
+* HR management systems
+* Applicant tracking systems (ATS)
+* Candidate database creation
+* Talent analytics
+
+---
+
+## Future Improvements
+
+* Deep learning-based NER model
+* Integration with FastAPI for deployment
+* Web interface for resume upload
+* Batch resume processing
+* Docker containerization
+
+---
+
+## Author
+
+Adarsh Thakur
+Machine Learning Engineer
+GitHub: https://github.com/Adarshthakur-850
+
+---
+
+## License
+
+This project is for educational and research purposes.
