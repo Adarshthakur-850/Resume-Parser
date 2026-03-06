@@ -1,0 +1,23 @@
+{
+    "name": "John Doe\nJohn.Doe@Example.Com",
+    "email": "john.doe@example.com",
+    "phone": "(555) 123-4567",
+    "skills": [
+        "NLP",
+        "Java",
+        "Machine Learning",
+        "Python",
+        "Docker",
+        "Pandas",
+        "SQL",
+        "AWS",
+        "Scikit-learn"
+    ],
+    "education": [
+        "B.Tech in Computer Science | Stanford University | 2014-2018"
+    ],
+    "experience": [],
+    "projects": [],
+    "certifications": [],
+    "total_experience_years": 5.0
+}
